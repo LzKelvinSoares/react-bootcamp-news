@@ -66,7 +66,7 @@ app.get('/topstories', (req, res, next) => {
     res.status(500).json({ type: 'error', message: err.message });
   });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`listening on ${PORT}`);
 });
